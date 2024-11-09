@@ -1,22 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import { Inter } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const inter = Inter({ subsets: ["cyrillic"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "800", "600"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -34,7 +22,7 @@ export default function RootLayout({
         <Navbar />
         <main className="w-full flex">
           <Sidebar activeTab={"Skill Test"} className="w-1/6" />
-          {children}
+          <div className="container h-full">{children}</div>
         </main>
       </body>
     </html>

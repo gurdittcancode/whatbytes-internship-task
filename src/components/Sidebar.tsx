@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Award, ChartNoAxesColumn } from "lucide-react";
+import { Award, ChartNoAxesColumn, StickyNote } from "lucide-react";
 import { FC } from "react";
 
 interface ISidebarProps {
@@ -41,15 +41,12 @@ const Sidebar: FC<ISidebarProps> = ({ activeTab, className }) => {
 
         {activeTab === "Internship" ? (
           <div className="flex gap-3 text-md bg-gray-100 p-4 rounded-r-full">
-            <ChartNoAxesColumn className="text-blue-700" strokeWidth={2} />
+            <StickyNote className="text-blue-700" strokeWidth={2} />
             <p className="text-blue-700 font-extrabold">Internship</p>
           </div>
         ) : (
           <div className="flex gap-3 text-md p-4">
-            <ChartNoAxesColumn
-              className="text-gray-600 font-bold"
-              strokeWidth={2}
-            />
+            <StickyNote className="text-gray-600 font-bold" strokeWidth={2} />
             <p className="text-gray-600 font-extrabold">Internship</p>
           </div>
         )}
