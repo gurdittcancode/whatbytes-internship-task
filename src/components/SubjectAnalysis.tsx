@@ -5,9 +5,9 @@ const SubjectWiseAnalysis: FC = () => {
     {
       name: "HTML Tools, Forms, History",
       progress: 80,
-      color: "text-sky-600",
-      bgColor: "bg-sky-600",
-      blankColor: "bg-sky-200",
+      color: "text-blue-600",
+      bgColor: "bg-blue-600",
+      blankColor: "bg-blue-200",
     },
     {
       name: "Tags & References in HTML",
@@ -33,14 +33,14 @@ const SubjectWiseAnalysis: FC = () => {
   ];
 
   return (
-    <div className="w-[450px] mr-2 px-5 py-8  border border-gray-200 rounded-lg">
+    <div className="w-[500px] mr-2 px-5 py-8  border border-gray-200 rounded-lg">
       <h2 className="text-lg font-bold mb-8">Syllabus wise analysis</h2>
       <div className="space-y-6">
         {subjects.map((subject, index) => (
           <div key={index} className="space-y-3">
             <span className="text-sm font-medium">{subject.name}</span>
             <div className="flex items-center space-x-2">
-              <div className="flex-grow max-w-[350px] relative h-2 rounded-full overflow-hidden">
+              <div className="flex-grow max-w-[350px] relative h-[0.6rem] rounded-full overflow-hidden">
                 <div className={`absolute inset-0 ${subject.blankColor}`}></div>
                 <div
                   style={{ width: `${subject.progress}%` }}
