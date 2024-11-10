@@ -22,6 +22,7 @@ interface IScoreSetterProps {
   setRank: React.Dispatch<SetStateAction<number>>;
 }
 
+// @ts-ignore
 const ScoreSetter: FC<IScoreSetterProps> = ({
   setRank,
   percentile,
