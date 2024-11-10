@@ -22,10 +22,10 @@ interface IScoreSetterProps {
   setRank: React.Dispatch<SetStateAction<number>>;
 }
 
-// @ts-ignore
+// @ts-expect-errror
 const ScoreSetter: FC<IScoreSetterProps> = ({
   setRank,
-  percentile,
+  // percentile,
   rank,
   setScore,
   setPercentile,
@@ -35,11 +35,11 @@ const ScoreSetter: FC<IScoreSetterProps> = ({
   const [newPercentile, setNewPercentile] = useState(score);
   const [newScore, setNewScore] = useState(score);
 
-  const [errors, setErrors] = useState({
-    rank: false,
-    percentile: false,
-    score: false,
-  });
+  // const [errors, setErrors] = useState({
+  //   rank: false,
+  //   percentile: false,
+  //   score: false,
+  // });
 
   function updateVariables() {
     {
