@@ -34,7 +34,7 @@ const SubjectWiseAnalysis: FC = () => {
 
   return (
     <div className="w-[500px] mr-2 px-5 py-8  border border-gray-200 rounded-lg">
-      <h2 className="text-lg font-bold mb-8">Syllabus wise analysis</h2>
+      <h2 className="text-md font-bold mb-8">Syllabus wise analysis</h2>
       <div className="space-y-6">
         {subjects.map((subject, index) => (
           <div key={index} className="space-y-3">
